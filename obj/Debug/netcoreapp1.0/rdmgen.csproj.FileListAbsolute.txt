@@ -1,0 +1,8 @@
+C:\Users\masme\Documents\Projects\rdmgen\bin\Debug\netcoreapp1.0\rdmgen.deps.json
+C:\Users\masme\Documents\Projects\rdmgen\bin\Debug\netcoreapp1.0\rdmgen.runtimeconfig.json
+C:\Users\masme\Documents\Projects\rdmgen\bin\Debug\netcoreapp1.0\rdmgen.runtimeconfig.dev.json
+C:\Users\masme\Documents\Projects\rdmgen\bin\Debug\netcoreapp1.0\rdmgen.dll
+C:\Users\masme\Documents\Projects\rdmgen\bin\Debug\netcoreapp1.0\rdmgen.pdb
+C:\Users\masme\Documents\Projects\rdmgen\obj\Debug\netcoreapp1.0\rdmgen.AssemblyInfo.cs
+C:\Users\masme\Documents\Projects\rdmgen\obj\Debug\netcoreapp1.0\rdmgen.dll
+C:\Users\masme\Documents\Projects\rdmgen\obj\Debug\netcoreapp1.0\rdmgen.pdb
