@@ -25,7 +25,14 @@ class Program
         pwd = new char[digits];
         for (int i = 0;i < digits; i++)
         {
-            pwd.SetValue(alpha[rdm.Next(alpha.Length)], i);
+            char a = alpha[rdm.Next(alpha.Length)];
+            // check for duplicate
+            if (!Array.Exists(pwd, element => element == a) )
+                pwd.SetValue(a, i);
+            else
+            {
+                i--;
+            }
         }
 
         Console.Write("Include numericals? [Y/N]: ");
