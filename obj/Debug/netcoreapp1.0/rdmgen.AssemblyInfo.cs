@@ -11,4 +11,3 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyProductAttribute("rdmgen")]
 [assembly: System.Reflection.AssemblyTitleAttribute("rdmgen")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
-[assembly: System.Resources.NeutralResourcesLanguageAttribute("en")]

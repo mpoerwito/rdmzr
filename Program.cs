@@ -51,7 +51,7 @@ class Program
             pwd.SetValue(specials[rdm.Next(specials.Length)], rdm.Next(pwd.Length));
 
         Console.WriteLine();
-        Console.WriteLine(pwd);
+        Console.WriteLine($"Generated {digits} digits password ::> {new string(pwd)}");
         Console.Write("\nPress any key to exit...");
         Console.ReadKey(true);
     }
