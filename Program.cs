@@ -3,7 +3,7 @@ class Program
 {
     static void Main(string[] args)
     {
-        int digits = 0;
+        int digits, n, c, s;
         char[] pwd;
         int min = 6;
         int max = 16;
@@ -12,6 +12,7 @@ class Program
         string numeric = "0123456789";
         string specials = "!@#$%&*-_=+[]";
         Random rdm = new Random((int)DateTime.Now.Ticks);
+        digits = n = c = s = 0;
 
         do {
             Console.Write($"Enter the number of characters to be generated ({min} - {max}): ");
@@ -22,6 +23,9 @@ class Program
         } while ( digits < min || digits > max);
 
         pwd = new char[digits];
+
+        // generate random lowercase letters
+        // to the length of user's request
         for (int i = 0;i < digits; i++)
         {
             char a = alpha[GetDigit(rdm,alpha.Length)];
@@ -32,23 +36,39 @@ class Program
                 i--;
         }
 
+        // maybe make 2 parts when digits is equal or larger than 12??
+
         Console.Write("Include numericals? [Y/N]: ");
         string input = Console.ReadLine();
         if (input == "Y" || input == "y")
-            pwd.SetValue(numeric[GetDigit(rdm,numeric.Length)], GetDigit(rdm, pwd.Length));
+        {
+            n = GetDigit(rdm, pwd.Length);
+            pwd.SetValue(numeric[GetDigit(rdm,numeric.Length)], n);
+        }
 
         Console.Write("Include capital letters? [Y/N]: ");
         input = Console.ReadLine();
         if (input == "Y" || input == "y")
-            pwd.SetValue(caps[GetDigit(rdm,caps.Length)], GetDigit(rdm, pwd.Length));
+        {
+            do {
+                c = GetDigit(rdm, pwd.Length);
+            } while (c == n);
+
+            pwd.SetValue(caps[GetDigit(rdm,caps.Length)], c);
+        }
 
         Console.Write("Include special characters? [Y/N]: ");
         input = Console.ReadLine();
         if (input == "Y" || input == "y")
-            pwd.SetValue(specials[GetDigit(rdm,specials.Length)], GetDigit(rdm, pwd.Length));
+        {
+            do {
+                s = GetDigit(rdm, pwd.Length);
+            } while (s == n || s == c );
+            pwd.SetValue(specials[GetDigit(rdm,specials.Length)], s );
+        }
 
         Console.WriteLine();
-        Console.WriteLine($"Generated {digits} digits password ::> {new string(pwd)}");
+        Console.WriteLine($"Generated {digits} chars password ::> {new string(pwd)}");
         Console.Write("\nPress any key to exit...");
         Console.ReadKey(true);
     }
